@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    id="com.polyvi.xface.extension.device-capability"
+    version="0.0.1">
+    <name>Device-capability</name>
+    <description>xFace Device Capability Plugin</description>
+    <license>Apache 2.0</license>
+    <keywords>xface device capability</keywords>
+
+    <js-module src="www/device-capability.js" name="device">
+        <merges target="device" />
+    </js-module>
+
+    <!-- ios -->
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="Device">
+                <param name="ios-package" value="CDVDevice"/>
+            </feature>
+        </config-file>
+
+        <source-file src="src/ios/CDVDevice+XDevice.m" />
+        <framework src="CoreLocation.framework" />
+        <framework src="CoreMotion.framework" />
+
+    </platform>
+    <dependency id="org.apache.cordova.device"/>
+
+</plugin>
