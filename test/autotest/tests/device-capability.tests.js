@@ -19,7 +19,7 @@
  *
 */
 
-describe('Device Information (window.device)', function () {
+describe('Device-capability Information (window.device)', function () {
     if(isAndroid()) {
         it("should contain a imei specification that is a string or a number", function() {
             expect(window.device.imei).toBeDefined();
@@ -33,7 +33,7 @@ describe('Device Information (window.device)', function () {
         it("should contain a imsi specification that is a string or a number,this will error if has no simcard or on pad", function() {
             expect(window.device.imsi).toBeDefined();
             if (typeof window.device.imsi == 'string' || typeof window.device.imsi == 'object') {
-                expect((new String(window.device.imsi)).length > 0).toBe(true);
+                expect((new String(window.device.imsi)).length >= 0).toBe(true);
             } else {
                 expect(window.device.imsi > 0).toBe(true);
             }

@@ -9,10 +9,6 @@
     <license>Apache 2.0</license>
     <keywords>xface device capability</keywords>
 
-    <js-module src="www/device-capability.js" name="device">
-        <merges target="device" />
-    </js-module>
-
     <!-- ios -->
     <platform name="ios">
         <config-file target="config.xml" parent="/*">
@@ -25,7 +21,29 @@
         <framework src="CoreLocation.framework" />
         <framework src="CoreMotion.framework" />
 
+        <js-module src="www/device-capability.js" name="device">
+            <merges target="device" />
+        </js-module>
     </platform>
+
+    <!-- android -->
+    <platform name="android">
+        <config-file target="config.xml" parent="/*">
+            <feature name="DeviceCapability">
+                <param name="android-package" value="com.polyvi.xface.extension.devicecapability.XDeviceCapabilityExt"/>
+            </feature>
+        </config-file>
+        <config-file target="AndroidManifest.xml" parent="/*">
+            <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+        </config-file>
+
+        <source-file src="src/android/XDeviceCapabilityExt.java" target-dir="src/com/polyvi/xface/extension/devicecapability"/>
+
+        <js-module src="www/android/device-capability.js" name="device">
+            <merges target="device" />
+        </js-module>
+    </platform>
+
     <dependency id="org.apache.cordova.device"/>
 
 </plugin>
