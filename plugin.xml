@@ -44,6 +44,25 @@
         </js-module>
     </platform>
 
+    <!-- wp8 -->
+    <platform name="wp8">
+        <js-module src="www/wp/device-capability.js" name="device">
+            <merges target="device" />
+        </js-module>
+        <config-file target="config.xml" parent="/*">
+            <feature name="DeviceCapability">
+                <param name="wp-package" value="DeviceCapability"/>
+            </feature>
+        </config-file>
+
+        <config-file target="Properties/WMAppManifest.xml" parent="/Deployment/App/Capabilities">
+            <Capability Name="ID_CAP_SENSORS" />
+            <Capability Name="ID_CAP_ISV_CAMERA" />
+        </config-file>
+
+        <source-file src="src/wp/XDeviceCapabilityExt.cs" />
+    </platform>
+
     <dependency id="org.apache.cordova.device"/>
 
 </plugin>
