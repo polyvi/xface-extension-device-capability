@@ -11,12 +11,6 @@
 
     <!-- ios -->
     <platform name="ios">
-        <config-file target="config.xml" parent="/*">
-            <feature name="Device">
-                <param name="ios-package" value="CDVDevice"/>
-            </feature>
-        </config-file>
-
         <source-file src="src/ios/CDVDevice+XDevice.m" />
         <framework src="CoreLocation.framework" />
         <framework src="CoreMotion.framework" />
