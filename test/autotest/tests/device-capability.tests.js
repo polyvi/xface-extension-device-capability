@@ -21,7 +21,7 @@
 
 describe('Device-capability Information (window.device)', function () {
     if(isAndroid()) {
-        it("device-capability.spec.1 should contain a imei specification that is a string or a number", function() {
+        it("device-capability.spec.1 should contain a imei specification that is a string or a number(pad ignore)", function() {
             expect(window.device.imei).toBeDefined();
             if (typeof window.device.imei == 'string' || typeof window.device.imei == 'object') {
                 expect((new String(window.device.imei)).length > 0).toBe(true);
