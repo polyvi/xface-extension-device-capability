@@ -25,3 +25,7 @@
  *  update plugin version
  *  [ios] removed conflicted config-file target to get me worked with device plugin.
  *  added jasmine tests unique id
+### 1.0.1 Mon Jan 27 2014 15:56:57 GMT+0800 (CST)
+ *  batch modify .reviewboard
+ *  #1[Fix bug]Fix auto test has one unpassed test; Bug reason:Some pad don't support imei attribute; Solution:Add test description
+ *  Incremented plugin version on dev branch to 1.0.1-dev

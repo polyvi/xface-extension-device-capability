@@ -3,7 +3,7 @@
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
     xmlns:android="http://schemas.android.com/apk/res/android"
     id="com.polyvi.xface.extension.device-capability"
-    version="1.0.1-dev">
+    version="1.0.1">
     <name>Device-capability</name>
     <description>xFace Device Capability Plugin</description>
     <license>GPLv3</license>
