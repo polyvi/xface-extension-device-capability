@@ -22,7 +22,7 @@
 
     <!-- android -->
     <platform name="android">
-        <config-file target="config.xml" parent="/*">
+        <config-file target="res/xml/config.xml" parent="/*">
             <feature name="DeviceCapability">
                 <param name="android-package" value="com.polyvi.xface.extension.devicecapability.XDeviceCapabilityExt"/>
             </feature>
