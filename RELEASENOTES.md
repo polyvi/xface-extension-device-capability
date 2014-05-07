@@ -29,3 +29,9 @@
  *  batch modify .reviewboard
  *  #1[Fix bug]Fix auto test has one unpassed test; Bug reason:Some pad don't support imei attribute; Solution:Add test description
  *  Incremented plugin version on dev branch to 1.0.1-dev
+
+## 1.0.2 (Wed May 07 2014)
+
+
+ *  Modify config.xml path error in plugin.xml
+ *  Incremented plugin version on dev branch to 1.0.2-dev
